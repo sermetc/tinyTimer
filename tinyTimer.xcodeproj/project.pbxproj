@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B644CB402A45A971000BF247 /* FootingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644CB3F2A45A971000BF247 /* FootingView.swift */; };
+		B644CB422A45A998000BF247 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644CB412A45A998000BF247 /* AboutView.swift */; };
+		B644CB442A45A9B2000BF247 /* TimerSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644CB432A45A9B2000BF247 /* TimerSettingView.swift */; };
+		B644CB472A45BCCD000BF247 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = B644CB462A45BCCD000BF247 /* LaunchAtLogin */; };
 		B677A30C2A450B7C009348F9 /* tinyTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B677A30B2A450B7C009348F9 /* tinyTimerApp.swift */; };
 		B677A30E2A450B7C009348F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B677A30D2A450B7C009348F9 /* ContentView.swift */; };
 		B677A3102A450B7D009348F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B677A30F2A450B7D009348F9 /* Assets.xcassets */; };
@@ -16,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B644CB3F2A45A971000BF247 /* FootingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootingView.swift; sourceTree = "<group>"; };
+		B644CB412A45A998000BF247 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		B644CB432A45A9B2000BF247 /* TimerSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettingView.swift; sourceTree = "<group>"; };
 		B677A3082A450B7C009348F9 /* tinyTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinyTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B677A30B2A450B7C009348F9 /* tinyTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tinyTimerApp.swift; sourceTree = "<group>"; };
 		B677A30D2A450B7C009348F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B644CB472A45BCCD000BF247 /* LaunchAtLogin in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				B677A30B2A450B7C009348F9 /* tinyTimerApp.swift */,
+				B644CB432A45A9B2000BF247 /* TimerSettingView.swift */,
+				B644CB3F2A45A971000BF247 /* FootingView.swift */,
+				B644CB412A45A998000BF247 /* AboutView.swift */,
 				B677A30D2A450B7C009348F9 /* ContentView.swift */,
 				B677A30F2A450B7D009348F9 /* Assets.xcassets */,
 				B677A3142A450B7D009348F9 /* Persistence.swift */,
@@ -91,6 +102,9 @@
 			dependencies = (
 			);
 			name = tinyTimer;
+			packageProductDependencies = (
+				B644CB462A45BCCD000BF247 /* LaunchAtLogin */,
+			);
 			productName = tinyTimer;
 			productReference = B677A3082A450B7C009348F9 /* tinyTimer.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +133,9 @@
 				Base,
 			);
 			mainGroup = B677A2FF2A450B7C009348F9;
+			packageReferences = (
+				B644CB452A45BCCD000BF247 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */,
+			);
 			productRefGroup = B677A3092A450B7C009348F9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -149,6 +166,9 @@
 				B677A30E2A450B7C009348F9 /* ContentView.swift in Sources */,
 				B677A30C2A450B7C009348F9 /* tinyTimerApp.swift in Sources */,
 				B677A3182A450B7D009348F9 /* tinyTimer.xcdatamodeld in Sources */,
+				B644CB442A45A9B2000BF247 /* TimerSettingView.swift in Sources */,
+				B644CB422A45A998000BF247 /* AboutView.swift in Sources */,
+				B644CB402A45A971000BF247 /* FootingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +302,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,6 +330,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -344,6 +366,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B644CB452A45BCCD000BF247 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/LaunchAtLogin-Modern";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B644CB462A45BCCD000BF247 /* LaunchAtLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B644CB452A45BCCD000BF247 /* XCRemoteSwiftPackageReference "LaunchAtLogin-Modern" */;
+			productName = LaunchAtLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		B677A3162A450B7D009348F9 /* tinyTimer.xcdatamodeld */ = {

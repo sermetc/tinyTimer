@@ -6,15 +6,56 @@
 //
 
 import SwiftUI
+import LaunchAtLogin
+
+struct IconLabelView: View {
+    @AppStorage("timerStatus") var status = false
+    @AppStorage("timerMinLabel") var min = 0
+    @AppStorage("timerSecLabel") var sec = 0
+    let image: NSImage = {
+            let ratio = $0.size.height / $0.size.width
+            $0.size.height = 18
+            $0.size.width = 18 / ratio
+            return $0
+    }(NSImage(named: "chicken-white")!)
+    var body: some View {
+        if status {
+            Text("\(min, specifier: "%02d"):\(sec, specifier: "%02d")")
+        }
+        Image(nsImage: image)
+            .renderingMode(.template)
+            .tint(.white)
+            .foregroundColor(.white)
+    }
+}
+
+struct SettingsView: View {
+    @AppStorage("openAtLoginSetting") var openAtLogin = false
+    var body: some View {
+        LaunchAtLogin.Toggle {
+            Text("launch at login")
+        }
+    }
+}
 
 @main
 struct tinyTimerApp: App {
     let persistenceController = PersistenceController.shared
-
+    
     var body: some Scene {
-        WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+        Settings {
+            AboutView()
+                .navigationTitle("tinyTimer")
         }
+        MenuBarExtra {
+            VStack {
+                TimerSettingView()
+                Divider()
+                FootingView()
+            }.padding()
+        } label: {
+            IconLabelView()
+        }
+        .menuBarExtraStyle(.window)
     }
 }
