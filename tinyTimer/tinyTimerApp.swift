@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import LaunchAtLogin
 
 struct IconLabelView: View {
     @AppStorage("timerStatus") var status = false
@@ -29,14 +28,6 @@ struct IconLabelView: View {
     }
 }
 
-struct SettingsView: View {
-    @AppStorage("openAtLoginSetting") var openAtLogin = false
-    var body: some View {
-        LaunchAtLogin.Toggle {
-            Text("launch at login")
-        }
-    }
-}
 
 @main
 struct tinyTimerApp: App {
@@ -52,7 +43,9 @@ struct tinyTimerApp: App {
                 TimerSettingView()
                 Divider()
                 FootingView()
-            }.padding()
+            }
+            .padding()
+            .frame(width: 220)
         } label: {
             IconLabelView()
         }

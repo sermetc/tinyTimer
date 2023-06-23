@@ -11,18 +11,21 @@
 		B644CB422A45A998000BF247 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644CB412A45A998000BF247 /* AboutView.swift */; };
 		B644CB442A45A9B2000BF247 /* TimerSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B644CB432A45A9B2000BF247 /* TimerSettingView.swift */; };
 		B644CB472A45BCCD000BF247 /* LaunchAtLogin in Frameworks */ = {isa = PBXBuildFile; productRef = B644CB462A45BCCD000BF247 /* LaunchAtLogin */; };
+		B67487A32A4619EE003D968A /* done_sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B67487A22A4619EE003D968A /* done_sound.mp3 */; };
 		B677A30C2A450B7C009348F9 /* tinyTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B677A30B2A450B7C009348F9 /* tinyTimerApp.swift */; };
 		B677A30E2A450B7C009348F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B677A30D2A450B7C009348F9 /* ContentView.swift */; };
 		B677A3102A450B7D009348F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B677A30F2A450B7D009348F9 /* Assets.xcassets */; };
 		B677A3132A450B7D009348F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B677A3122A450B7D009348F9 /* Preview Assets.xcassets */; };
 		B677A3152A450B7D009348F9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B677A3142A450B7D009348F9 /* Persistence.swift */; };
 		B677A3182A450B7D009348F9 /* tinyTimer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B677A3162A450B7D009348F9 /* tinyTimer.xcdatamodeld */; };
+		B6B8C4E62A46170B00384175 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B8C4E52A46170B00384175 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B644CB3F2A45A971000BF247 /* FootingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootingView.swift; sourceTree = "<group>"; };
 		B644CB412A45A998000BF247 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		B644CB432A45A9B2000BF247 /* TimerSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSettingView.swift; sourceTree = "<group>"; };
+		B67487A22A4619EE003D968A /* done_sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = done_sound.mp3; sourceTree = "<group>"; };
 		B677A3082A450B7C009348F9 /* tinyTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinyTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B677A30B2A450B7C009348F9 /* tinyTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tinyTimerApp.swift; sourceTree = "<group>"; };
 		B677A30D2A450B7C009348F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -31,6 +34,7 @@
 		B677A3142A450B7D009348F9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B677A3172A450B7D009348F9 /* tinyTimer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = tinyTimer.xcdatamodel; sourceTree = "<group>"; };
 		B677A3192A450B7D009348F9 /* tinyTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tinyTimer.entitlements; sourceTree = "<group>"; };
+		B6B8C4E52A46170B00384175 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,7 +73,9 @@
 				B644CB3F2A45A971000BF247 /* FootingView.swift */,
 				B644CB412A45A998000BF247 /* AboutView.swift */,
 				B677A30D2A450B7C009348F9 /* ContentView.swift */,
+				B6B8C4E52A46170B00384175 /* Player.swift */,
 				B677A30F2A450B7D009348F9 /* Assets.xcassets */,
+				B67487A22A4619EE003D968A /* done_sound.mp3 */,
 				B677A3142A450B7D009348F9 /* Persistence.swift */,
 				B677A3192A450B7D009348F9 /* tinyTimer.entitlements */,
 				B677A3162A450B7D009348F9 /* tinyTimer.xcdatamodeld */,
@@ -151,6 +157,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B677A3132A450B7D009348F9 /* Preview Assets.xcassets in Resources */,
+				B67487A32A4619EE003D968A /* done_sound.mp3 in Resources */,
 				B677A3102A450B7D009348F9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +173,7 @@
 				B677A30E2A450B7C009348F9 /* ContentView.swift in Sources */,
 				B677A30C2A450B7C009348F9 /* tinyTimerApp.swift in Sources */,
 				B677A3182A450B7D009348F9 /* tinyTimer.xcdatamodeld in Sources */,
+				B6B8C4E62A46170B00384175 /* Player.swift in Sources */,
 				B644CB442A45A9B2000BF247 /* TimerSettingView.swift in Sources */,
 				B644CB422A45A998000BF247 /* AboutView.swift in Sources */,
 				B644CB402A45A971000BF247 /* FootingView.swift in Sources */,
@@ -302,6 +310,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -330,6 +339,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (

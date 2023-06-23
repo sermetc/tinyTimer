@@ -24,15 +24,8 @@ struct AboutView: View {
                 .font(.footnote)
             Spacer()
             
-            Button {
-                //
-            } label: {
-                Text("github")
-                    .foregroundColor(.white)
-                    .font(.footnote)
-            }
-            .buttonStyle(.plain)
-
+            Link("github/sermetc/tinyTimer", destination: URL(string: "https://www.github.com/sermetc/tinyTimer")!)
+                .font(.footnote)
                 
         }
         .padding(.bottom)

@@ -17,18 +17,20 @@ struct TimerSettingView: View {
     @State var totalTimeInSeconds: Int = 0
     @State var remainingTimeAfterPauseInSeconds: Int = 0
     
-    @AppStorage("timerStatus") var timerStatus: Bool = false
-    @AppStorage("timerPaused") var timerPaused: Bool = false
-    @AppStorage("timerEnded") var timerEnded: Bool = false
+    @AppStorage("timerStatus") var timerStatus: Bool = false //  working or not
+    @AppStorage("timerPaused") var timerPaused: Bool = false // paused or not
+    
+    @AppStorage("playsound") var soundOn: Bool = false
     
     @State private var startTime = Date()
     @State private var timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
-    
+    let player = Player()
+
     var body: some View {
         VStack {
             Text("\(min_label, specifier: "%02d") : \(sec_label, specifier: "%02d")")
-                .font(.title)
+                .font(.largeTitle)
                 .onReceive(timer) { _ in
                     if totalTimeInSeconds >= 0 {
                         min_label = totalTimeInSeconds/60
@@ -36,13 +38,16 @@ struct TimerSettingView: View {
                         totalTimeInSeconds -= 1
                     } else {
                         timerStatus = false
-                        timerEnded = true
-                        
                     }
                 }
                 .onAppear() {
                     totalTimeInSeconds = mins*60 + secs
                     timer.upstream.connect().cancel()
+                }
+                .onChange(of: timerStatus) { newValue in
+                    if timerStatus == false && soundOn  {
+                        player.play()
+                    }
                 }
             HStack {
                 Button {
@@ -62,18 +67,20 @@ struct TimerSettingView: View {
                 } label: {
                     Text(timerStatus ? "pause" : "start")
                         .foregroundColor(.white)
+                        .frame(width: 75)
                 }
                 Button {
-                    mins = 0
-                    min_label = 0
-                    secs = 0
-                    sec_label = 0
-                    totalTimeInSeconds = 0
-                    timerStatus.toggle()
+                    min_label = mins
+                    sec_label = secs
+                    totalTimeInSeconds = mins*60 + secs
+                    if timerStatus {
+                        timerStatus.toggle()
+                    }
                     timer.upstream.connect().cancel()
                 } label: {
                     Text("reset")
                         .foregroundColor(.white)
+                        .frame(width: 75)
                 }
             }
             HStack {

@@ -6,6 +6,22 @@
 //
 
 import SwiftUI
+import LaunchAtLogin
+
+struct SettingsView: View {
+    @AppStorage("playsound") var soundOn: Bool = false
+    var body: some View {
+        VStack (alignment: .leading) {
+            LaunchAtLogin.Toggle {
+                Text("launch at login")
+            }
+            Toggle("play sound", isOn: $soundOn)
+                .toggleStyle(.checkbox)
+        }
+        .frame(width: 190, alignment: .leading)
+        Divider()
+    }
+}
 
 struct FootingView: View {
     @Environment(\.openWindow) var openWindow
